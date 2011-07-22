@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  url: MyString
+  description: MyText
+  city_id: 1
+  start_at: 2011-07-17 13:42:15
+  stop_at: 2011-07-17 13:42:15
+
+two:
+  name: MyString
+  url: MyString
+  description: MyText
+  city_id: 1
+  start_at: 2011-07-17 13:42:15
+  stop_at: 2011-07-17 13:42:15
