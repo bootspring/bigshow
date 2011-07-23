@@ -27,12 +27,16 @@ Vagrant::Config.run do |config|
   # to this Vagrantfile), and adding some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "chef"
-    chef.add_recipe "mysql"
-    #chef.add_role "web"
-  
+    chef.cookbooks_path = ["chef/site-cookbooks", "chef/cookbooks"]
+    chef.roles_path = "chef/roles"
+    chef.add_role "web"
+
     # You may also specify custom JSON attributes:
-    chef.json.merge!({ :mysql_password => "" })
+    chef.json.merge!({ 
+      :fqdn => 'bubba.local',
+      :domain => 'local',
+      :mysql_password => "" 
+    })
   end
 
 end
