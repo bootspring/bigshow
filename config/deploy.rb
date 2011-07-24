@@ -11,3 +11,9 @@ set :scm, :git
 set :branch, "master"
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
+
+
+desc "precompile the assets"
+after 'deploy:update_code' do
+  run "cd #{release_path}; RAILS_ENV=#{rails_env} bundle exec rake assets:precompile"
+end
