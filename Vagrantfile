@@ -35,7 +35,9 @@ Vagrant::Config.run do |config|
     chef.json.merge!({ 
       :fqdn => 'bubba.local',
       :domain => 'local',
-      :mysql_password => "" 
+      :mysql => {
+        :server_root_password => ""
+      }
     })
   end
 
