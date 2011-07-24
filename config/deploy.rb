@@ -13,8 +13,34 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
 
+namespace :foreman do
+  desc "Export the Procfile to Ubuntu's upstart scripts"
+  task :export, :roles => :app do
+    run "cd #{release_path} && rvmsudo bundle exec foreman export upstart /etc/init -a #{application} -u #{user}"
+  end
+end
+
+namespace :deploy do
+  desc "Start the application services"
+  task :start, :roles => :app do
+    sudo "start #{application}"
+  end
+
+  desc "Stop the application services"
+  task :stop, :roles => :app do
+    sudo "stop #{application}"
+  end
+
+  desc "Restart the application services"
+  task :restart, :roles => :app do
+    run "sudo start #{application} || sudo restart #{application}"
+  end
+end
+
 
 desc "precompile the assets"
 after 'deploy:update_code' do
   run "cd #{release_path}; RAILS_ENV=#{rails_env} bundle exec rake assets:precompile"
 end
+
+after "deploy:update", "foreman:export"
