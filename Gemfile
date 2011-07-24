@@ -18,7 +18,8 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
+gem 'foreman'
 
 # Deploy with Capistrano
 gem 'capistrano'
