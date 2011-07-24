@@ -17,7 +17,9 @@ test:
 production:
   <<: *defaults
   database: bigshow_production
+  socket: /var/run/mysqld/mysqld.sock
 
 staging:
   <<: *defaults
   database: bigshow_staging
+  socket: /var/run/mysqld/mysqld.sock
