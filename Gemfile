@@ -1,6 +1,9 @@
 source 'http://rubygems.org'
 
+gem 'rake'
 gem 'rails', '3.1.0.rc4'
+
+gem 'therubyracer', :require => false
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
