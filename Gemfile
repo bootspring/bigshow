@@ -2,12 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rake'
 gem 'rails', '3.1.0.rc4'
-
-gem 'therubyracer', :require => false
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2'
 
 # Asset template engines
@@ -20,6 +14,7 @@ gem 'jquery-rails'
 # Use unicorn as the web server
 gem 'unicorn', :require => false
 gem 'foreman', :require => false
+gem 'therubyracer', :require => false
 
 # Deploy with Capistrano
 gem 'capistrano'

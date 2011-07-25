@@ -6,13 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-id = City.create!(:name => 'sanfran', :title => 'San Francisco, CA').id
+City.destroy_all
+id = City.create!(:name => 'sf', :title => 'San Francisco, CA').id
+City.create! :name => 'la', :title => 'Los Angeles, CA'
 City.create! :name => 'austin', :title => 'Austin, TX'
 City.create! :name => 'dallas', :title => 'Dallas, TX'
 City.create! :name => 'houston', :title => 'Houston, TX'
 City.create! :name => 'portland', :title => 'Portland, OR'
 City.create! :name => 'seattle', :title => 'Seattle, WA'
 
+Event.destroy_all
 Event.create! :name => 'Bay 2 Breakers',
   :url => 'http://baytobreakers.com',
   :description => 'Annual run across the peninsula',
