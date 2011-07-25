@@ -38,5 +38,6 @@ module Bigshow
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.active_support.deprecation = :stderr
   end
 end

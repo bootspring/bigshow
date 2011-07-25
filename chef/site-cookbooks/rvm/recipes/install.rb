@@ -16,6 +16,7 @@ bash "make #{ruby_version} the default ruby" do
   code <<-EOS
     rvm --default #{ruby_version}
     rvm #{ruby_version}@global gem install chef
+    rvm #{ruby_version}@global gem install bundler
   EOS
   not_if "rvm list | grep '=> #{ruby_version}'"
 #  notifies :restart, "service[chef-client]"

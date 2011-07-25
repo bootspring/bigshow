@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+  </tr>
+  <% @events.each do |event| %>
+  <tr>
+    <td><%= link_to event.name, event.url, :target => '_new' %></td>
+    <td><%= event.start_at %></td>
+  </tr>
+  <% end %>
+</table>
