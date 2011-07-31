@@ -18,7 +18,6 @@ City.create! :name => 'seattle', :title => 'Seattle, WA'
 Event.destroy_all
 Event.create! :name => 'Bay 2 Breakers',
   :url => 'http://baytobreakers.com',
-  :description => 'Annual run across the peninsula',
   :city_id => id,
   :start_at => Time.local(2011, 05, 26, 7, 0, 0),
   :stop_at => Time.local(2011, 05, 26, 12, 0, 0)

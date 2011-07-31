@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(:version => 20110717210100) do
 
   create_table "cities", :force => true do |t|
-    t.string   "name"
-    t.string   "title"
+    t.string   "name",       :limit => 16, :null => false
+    t.string   "title",      :limit => 32, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(:version => 20110717210100) do
   add_index "cities", ["name"], :name => "index_cities_on_name", :unique => true
 
   create_table "events", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.text     "description"
-    t.integer  "city_id"
-    t.datetime "start_at"
-    t.datetime "stop_at"
+    t.string   "name",       :limit => 64,  :null => false
+    t.string   "email",      :limit => 64
+    t.string   "url",        :limit => 128, :null => false
+    t.integer  "city_id",                   :null => false
+    t.date     "start_at",                  :null => false
+    t.date     "stop_at",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

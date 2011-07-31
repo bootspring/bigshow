@@ -7,10 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render :partial => 'shared/header' %>
-
-  <%= yield %>
-
-  <%= render :partial => 'shared/footer' %>
+  <div id='page'>
+    <%= render :partial => 'shared/header' %>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <%= render :partial => 'shared/footer' %>
+  </div>
 </body>
 </html>

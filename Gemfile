@@ -10,6 +10,7 @@ gem 'coffee-script'
 gem 'uglifier'
 
 gem 'jquery-rails'
+gem 'formtastic', '2.0.0.rc3'
 
 # Use unicorn as the web server
 gem 'unicorn', :require => false

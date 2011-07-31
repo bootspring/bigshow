@@ -1,21 +1,52 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require reset-min
+ *= require formtastic
  *= require_self
  *= require_tree . 
 */
 
 body {
-  width: 920px;
-  margin: 0 auto;
+  width: 99%;
+  background-color: #fff;
   font-family: Arial;
   font-size: 16px;
+  line-height: 1.4em;
+}
+
+a {
+  color: #48d;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  padding: 5px 0;
+}
+
+h1 {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 1.3em;
+  padding-bottom: 5px;
+}
+h3 {
+  font-size: 1.2em;
+  padding-bottom: 5px;
+}
+
+#page {
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  padding: 30px;
+  width: 920px;
+  margin: 0 auto;
   background-color: #def;
 }
 
 #header {
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 #header #logo {
@@ -23,5 +54,19 @@ body {
 }
 
 #footer {
-  padding: 50px 0;
+  padding-top: 50px;
+}
+
+#content li {
+  list-style: square;
+  margin-left: 16px;
+}
+
+.formtastic {
+  padding: 30px;
+}
+
+#content .formtastic li {
+  list-style: none;
+  margin-left: 0;
 }

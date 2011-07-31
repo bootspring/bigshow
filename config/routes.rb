@@ -1,4 +1,5 @@
 Bigshow::Application.routes.draw do
+  resources :events
   match ':id' => 'cities#show'
 
   # The priority is based upon order of creation:
