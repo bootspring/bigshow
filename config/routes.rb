@@ -48,9 +48,11 @@ Bigshow::Application.routes.draw do
   #     resources :products
   #   end
 
+  match '/info/:page' => 'pages#show'
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'city#index'
+  root :to => 'cities#index'
 
   # See how all your routes lay out with "rake routes"
 
