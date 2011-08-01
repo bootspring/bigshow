@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bigshow</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Find fun events in your city">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>What's Up Next Week?</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,5 +17,12 @@
     </div>
     <%= render :partial => 'shared/footer' %>
   </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>
+    var _gaq=[['_setAccount','UA-2569989-5'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
 </html>

@@ -3,12 +3,12 @@
 <p>
   If your event matches our general criteria, we'll include it in
   our event listing for your city.  Events should be:
-  <ul>
-    <li>Annual or One-time, not monthly or more frequently</li>
-    <li>Family-friendly and of interest to the general public</li>
-    <li>Within a reasonable distance of a major city</li>
-  </ul>
 </p>
+<ul>
+  <li>Annual or One-time, not monthly or more frequently</li>
+  <li>Family-friendly and of interest to the general public</li>
+  <li>Within a reasonable distance of a major city</li>
+</ul>
 <p>
   Examples of good events: the Fillmore Jazz Festival, Bay to Breakers 12k run,
   Annual City Art Show, the Indianapolis 500.
@@ -17,10 +17,15 @@
 <%= semantic_form_for @event do |form| %>
   <%= form.inputs do %>
     <%= form.input :city %>
-    <%= form.input :name, :input_html => {  :maxlength => 40 }  %>
+    <%= form.input :name, :input_html => {  :maxlength => 60 }  %>
     <%= form.input :url, :input_html => {  :maxlength => 100 }  %>
-    <%= form.input :start_at %>
-    <%= form.input :stop_at %>
+    <%= form.input :start_at, :label => "First Day" %>
+    <%= form.input :stop_at, :label => "Last Day" %>
+    <%= form.input :email, :label => "Your email §", :required => false %>
   <% end %>
   <%= form.buttons %>
 <% end %>
+
+<p>
+  § Your email is optional and will be used to inform you when your event is accepted.
+</p>

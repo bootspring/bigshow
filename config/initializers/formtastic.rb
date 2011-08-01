@@ -23,7 +23,7 @@
 
 # Should select fields have a blank option/prompt by default?
 # Defaults to true.
-# Formtastic::FormBuilder.include_blank_for_select_by_default = true
+Formtastic::FormBuilder.include_blank_for_select_by_default = false
 
 # Set the string that will be appended to the labels/fieldsets which are required
 # It accepts string or procs and the default is a localized version of
@@ -54,8 +54,8 @@
 # for the text inside each @<option>@ tag or alongside each radio @<input>@. The first method
 # that is found on the object will be used.
 # Defaults to ["to_label", "display_name", "full_name", "name", "title", "username", "login", "value", "to_s"]
-# Formtastic::FormBuilder.collection_label_methods = [
-#   "to_label", "display_name", "full_name", "name", "title", "username", "login", "value", "to_s"]
+ Formtastic::FormBuilder.collection_label_methods = [
+   "to_label", "display_name", "full_name", "title", "name", "username", "login", "value", "to_s"]
 
 # Additionally, you can customize the order for specific types of inputs.
 # This is configured on a type basis and if a type is not found it will

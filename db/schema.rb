@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110717210100) do
+ActiveRecord::Schema.define(:version => 20110801160422) do
 
   create_table "cities", :force => true do |t|
     t.string   "name",       :limit => 16, :null => false
@@ -22,14 +22,15 @@ ActiveRecord::Schema.define(:version => 20110717210100) do
   add_index "cities", ["name"], :name => "index_cities_on_name", :unique => true
 
   create_table "events", :force => true do |t|
-    t.string   "name",       :limit => 64,  :null => false
-    t.string   "email",      :limit => 64
-    t.string   "url",        :limit => 128, :null => false
-    t.integer  "city_id",                   :null => false
-    t.date     "start_at",                  :null => false
-    t.date     "stop_at",                   :null => false
+    t.string   "name",        :limit => 64,  :null => false
+    t.string   "email",       :limit => 64
+    t.string   "url",         :limit => 128, :null => false
+    t.integer  "city_id",                    :null => false
+    t.date     "start_at",                   :null => false
+    t.date     "stop_at",                    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "approved_at"
   end
 
   add_index "events", ["city_id"], :name => "index_events_on_city_id"
