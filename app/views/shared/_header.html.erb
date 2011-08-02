@@ -1,3 +1,8 @@
 <div id="header">
   <a href="/"><span id="logo">What's Up Next Week?</span></a>
+  <ul id="cities">
+    <% @cities.each do |city| %>
+      <li><%= link_to city.name, "/#{city.name}" %></li>
+    <% end %>
+  </ul>
 </div>
