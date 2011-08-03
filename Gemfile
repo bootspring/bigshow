@@ -12,6 +12,8 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'formtastic', '2.0.0.rc3'
 
+gem 'girl_friday'
+
 # Use unicorn as the web server
 gem 'unicorn', :require => false
 gem 'foreman', :require => false

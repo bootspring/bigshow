@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  url: MyString
-  description: MyText
-  city_id: 1
+  name: event one
+  url: http://some.event.com
+  city: one
   start_at: 2011-07-17 13:42:15
   stop_at: 2011-07-17 13:42:15
 
 two:
-  name: MyString
-  url: MyString
-  description: MyText
-  city_id: 1
+  name: event two
+  url: http://other.event.com
+  city: one
   start_at: 2011-07-17 13:42:15
   stop_at: 2011-07-17 13:42:15

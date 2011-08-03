@@ -54,6 +54,7 @@ GEM
       thor (>= 0.13.6)
     formtastic (2.0.0.rc3)
       rails (~> 3.0)
+    girl_friday (0.9.3)
     highline (1.6.2)
     hike (1.2.0)
     i18n (0.6.0)
@@ -142,6 +143,7 @@ DEPENDENCIES
   coffee-script
   foreman
   formtastic (= 2.0.0.rc3)
+  girl_friday
   jquery-rails
   mysql2
   rails (= 3.1.0.rc5)
