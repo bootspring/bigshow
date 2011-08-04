@@ -4,7 +4,6 @@ class CitiesController < ApplicationController
   end
 
   def show
-    @cities = City.all
     @events = City.find_by_name(params[:id]).events
   end
 end
