@@ -1,15 +1,32 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: event one
+b2b:
+  name: Bay 2 Breakers
   url: http://some.event.com
-  city: one
-  start_at: 2011-07-17 13:42:15
-  stop_at: 2011-07-17 13:42:15
+  city: sf
+  start_at: <%= Time.now %>
+  stop_at: <%= Time.now %>
+  approved_at: <%= Time.now %>
 
-two:
-  name: event two
+fjf:
+  name: Fillmore Jazz Festival
   url: http://other.event.com
-  city: one
-  start_at: 2011-07-17 13:42:15
-  stop_at: 2011-07-17 13:42:15
+  city: sf
+  start_at: <%= Time.now %>
+  stop_at: <%= Time.now %>
+  approved_at: <%= Time.now %>
+
+pp:
+  name: Pride Parade
+  url: http://bigparade.com
+  city: sf
+  start_at: <%= Time.now %>
+  stop_at: <%= Time.now %>
+
+lbgp:
+  name: Long Beach Grand Prix
+  url: http://other.event.com
+  city: la
+  start_at: <%= Time.now %>
+  stop_at: <%= Time.now %>
+  approved_at: <%= Time.now %>

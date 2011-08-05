@@ -1,5 +1,6 @@
 City by city twitter accounts
 Accept events via twitter
+Braintree integration
 
 Post to facebook
 Tweet this event
