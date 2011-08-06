@@ -1,0 +1,31 @@
+upstream unicorn {
+  server 127.0.0.1:5000;
+}
+
+server {
+  listen   80;
+  server_name  whatsupnextweek.com www.whatsupnextweek.com;
+
+  access_log  /var/log/nginx/bigshow.access.log;
+
+  root   <%= node[:bigshow][:dir] %>/public;
+
+  location / {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+
+    # If you don't find the filename in the static files
+    # Then request it from the unicorn server
+    if (!-f $request_filename) {
+      proxy_pass http://unicorn;
+      break;
+    }
+  }
+
+<%#   location ~* ^/assets {%>
+<%#     expires max;%>
+<%#     add_header Cache-Control public;%>
+<%#     break;%>
+<%#   }%>
+}

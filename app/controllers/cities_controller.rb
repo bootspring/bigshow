@@ -5,7 +5,7 @@ class CitiesController < ApplicationController
   end
 
   def show
-    expires_in 1.hour, :public => true
+    #expires_in 1.hour, :public => true
     render :status => 400, :nothing => true and return if params[:id].blank? 
     city_id = supported_cities[params[:id]]
     render :status => 404, :nothing => true and return unless city_id
