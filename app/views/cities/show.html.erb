@@ -5,7 +5,7 @@
   </tr>
   <% @events.each do |event| %>
   <tr>
-    <td><%= link_to event.name, event.url, :target => '_new' %></td>
+    <td><%= link_to event.name, event.url, :target => '_new', :onclick => "recordOutboundLink(this, '#{city_name}', '#{event.url}');return false;" %></td>
     <td><%= event.start_at %></td>
   </tr>
   <% end %>
