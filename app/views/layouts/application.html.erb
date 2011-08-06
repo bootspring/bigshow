@@ -7,7 +7,6 @@
   <link rel="icon" href="/favicon.ico" type="image/icon"> 
   <title>What's Up Next Week?</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,6 +18,7 @@
     <%= render :partial => 'shared/footer' %>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <%= javascript_include_tag "application" %>
   <script>
     var _gaq=[['_setAccount','UA-2569989-5'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
