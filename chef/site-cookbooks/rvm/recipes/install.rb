@@ -2,7 +2,7 @@
 # Cookbook Name:: rvm
 # Recipe:: install
 
-ruby_version = 'ruby-1.9.2-p290'
+ruby_version = 'ruby-1.9.3-preview1'
 include_recipe "rvm::default"
 
 bash "installing #{ruby_version}" do
