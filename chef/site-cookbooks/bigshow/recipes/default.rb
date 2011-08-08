@@ -1,8 +1,5 @@
 require_recipe 'rvm::install'
 
-gem_package 'bundler'
-
-
 service 'varnish' do
   action :stop
 end

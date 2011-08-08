@@ -19,4 +19,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def approve
+    @event = Event.find(params[:id])
+    @event.approve!
+    redirect_to "/#{@event.city.name}"
+  end
+
 end

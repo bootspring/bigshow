@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Event submitted for approval</h1>
+    <p>
+      City: <%= @event.city.title %>
+    </p>
+    <p>
+      Name: <%= @event.name %>
+    </p>
+    <p>
+      URL: <%= @event.url %> (<%= link_to 'Clicky', @event.url %>)
+    </p>
+    <p>
+      Date: <%= @event.start_at %> - <%= @event.stop_at %>
+    </p>
+    <p>
+      From: <%= @event.email.blank? ? 'Anonymous' : @event.email %>
+    </p>
+    <p>
+      <%= link_to 'Approve', approve_event_url(@event) %>
+    </p>
+  </body>
+</html>
