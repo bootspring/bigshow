@@ -21,6 +21,11 @@ namespace :foreman do
 end
 
 namespace :deploy do
+  desc "Bootstrap the database by creating, migrating and seeding"
+  task :bootstrap, :roles => :db do
+    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake db:create db:migrate db:seed"
+  end
+
   desc "Start the application services"
   task :start, :roles => :app do
     sudo "start #{application}"
