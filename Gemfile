@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rake'
+gem 'rake', '0.9.2'
 gem 'rails', '3.1.0.rc5'
 gem 'mysql2'
 

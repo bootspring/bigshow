@@ -16,7 +16,7 @@ ssh_options[:forward_agent] = true
 namespace :foreman do
   desc "Export the Procfile to Ubuntu's upstart scripts"
   task :export, :roles => :app do
-    run "cd #{release_path} && rvmsudo bundle exec foreman export upstart /etc/init -a #{application} -u #{user}"
+    run "cd #{release_path} && sudo bundle exec foreman export upstart /etc/init -a #{application} -u #{user}"
   end
 end
 
