@@ -1,8 +1,7 @@
 /*
- *= require reset-min
  *= require formtastic
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
 
 body {
@@ -82,27 +81,27 @@ p {
   margin-left: 0;
 }
 
-#content table {
-	margin: 45px;
-	width: 480px;
-	text-align: left;
-	border-collapse: collapse;
-}
-#content table th {
-	padding: 8px;
-	background: #b9c9fe;
-	border-top: 4px solid #aabcfe;
-	border-bottom: 1px solid #fff;
-	color: #039;
-}
-#content table td {
-	padding: 8px;
-	background: #e8edff; 
-	border-bottom: 1px solid #fff;
-	color: #669;
-	border-top: 1px solid transparent;
-}
-#content table tr:hover td {
-	background: #d0dafd;
-	color: #339;
-}
+/* #content table {*/
+	/* margin: 45px;*/
+	/* width: 480px;*/
+	/* text-align: left;*/
+	/* border-collapse: collapse;*/
+/* }*/
+/* #content table th {*/
+	/* padding: 8px;*/
+	/* background: #b9c9fe;*/
+	/* border-top: 4px solid #aabcfe;*/
+	/* border-bottom: 1px solid #fff;*/
+	/* color: #039;*/
+/* }*/
+/* #content table td {*/
+	/* padding: 8px;*/
+	/* background: #e8edff; */
+	/* border-bottom: 1px solid #fff;*/
+	/* color: #669;*/
+	/* border-top: 1px solid transparent;*/
+/* }*/
+/* #content table tr:hover td {*/
+	/* background: #d0dafd;*/
+	/* color: #339;*/
+/* }*/

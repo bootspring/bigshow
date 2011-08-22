@@ -1,8 +1,12 @@
-<div id="header">
-  <a href="/"><span id="logo">What's Up Next Week?</span></a>
-  <ul id="cities">
-    <% @cities.each do |city| %>
-      <li><%= link_to city.name, "/#{city.name}" %></li>
-    <% end %>
-  </ul>
+<div id="header" class="row">
+  <div id="hleft" class="span8 columns">
+    <a href="/"><span id="logo">What's Up Next Week?</span></a>
+  </div>
+  <div id="hright" class="span6 columns offset2">
+    <ul id="cities">
+      <% @cities.each do |city| %>
+        <li><%= link_to city.name, "/#{city.name}" %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
