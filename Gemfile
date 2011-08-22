@@ -11,6 +11,7 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 gem 'formtastic', '2.0.0.rc4'
+gem 'sprockets', '2.0.0.beta.13'
 
 gem 'girl_friday'
 
