@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake', '0.9.2'
-gem 'rails', '3.1.0.rc5'
+gem 'rails', '3.1.0.rc6'
 gem 'mysql2'
 
 # Asset template engines
@@ -10,7 +10,7 @@ gem 'coffee-script'
 gem 'uglifier'
 
 gem 'jquery-rails'
-gem 'formtastic', '2.0.0.rc3'
+gem 'formtastic', '2.0.0.rc4'
 
 gem 'girl_friday'
 
