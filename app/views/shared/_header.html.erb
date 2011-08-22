@@ -1,9 +1,9 @@
-<div id="header" class="row">
-  <div id="hleft" class="span8 columns">
-    <a href="/"><span id="logo">What's Up Next Week?</span></a>
-  </div>
-  <div id="hright" class="span6 columns offset2">
-    <ul id="cities">
+<div class="topbar">
+  <div class="container">
+    <h3>
+      <a href="/"><span>What's Up Next Week?</span></a>
+    </h3>
+    <ul class="primay-nav">
       <% @cities.each do |city| %>
         <li><%= link_to city.name, "/#{city.name}" %></li>
       <% end %>

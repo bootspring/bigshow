@@ -13,9 +13,9 @@ class CitiesController < ApplicationController
   end
 
   def supported_cities
-    Rails.cache.fetch('supported_cities', :expires_in => 1.hour) do
+    # Rails.cache.fetch('supported_cities', :expires_in => 1.hour) do
       rows = City.connection.select_rows("select id, name from cities")
       rows.inject({}) { |memo, (id, name)| memo[name] = id; memo }
-    end
+    # end
   end
 end
